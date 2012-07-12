@@ -36,10 +36,11 @@ As just a basic scroller with pre-rendered content:
 ```javascript
 
 new TouchScrollListView({el: $element});
-
 ```
 
 With an infinitely scrolling list:
+
+```javascript
 
 new TouchScrollListView({
 	el: $element,
@@ -59,3 +60,4 @@ new TouchScrollListView({
     	return {a: 0, b: 2, f: 3};
    	}
  });
+ ```
