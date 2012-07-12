@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <title>List Example</title>
+  <script src="../test/vendor/jquery.js"></script>
+  <script src="../test/vendor/underscore.js"></script>
+  <script src="../test/vendor/backbone.js"></script>
+  <script src="../test/vendor/iscroll.js"></script>
+  <script src="../backbone.scrollinglist.js"></script>
+  <script src="list.js"></script>
+</head>
+
+<style>
+  .container {
+    border: 1px solid;
+    width: 320px;
+    height: 480px;
+  }
+
+  .user-list {
+    margin: 0;
+    padding: 0;
+  }
+
+  .list-item {
+    border-bottom: 1px solid;
+    margin: 0;
+    padding: 0;
+    width: 320px;
+  }
+</style>
+
+
+<body>
+ <h1>Viximo/backbone.scrollinglist</h1>
+
+ <div class="container">
+ </div>
+
+
+ <script id="list" type="text/template">
+  <div class="touch-scroll-list">
+    <ul class="user-list data-list">
+    </ul>
+  </div>
+</script>
+
+
+<script id="scroll_list_item_template" type="text/template">
+  <li class="list-item">
+    <div class="user">
+      <span class="list-icon-container">
+        <span class="lazy list-icon list-icon-filler">
+          <img class="lazy list-icon" />
+        </span>
+      </span>
+      <div class="outter-item-wrapper">
+         <div class="inner-item-wrapper">
+          <div>
+            <p class="name"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </li>
+</script>
+
+
+<script>
+  var $container = $('.container');
+  var list = new ListView();
+  $container.append(list.el);
+  list.render();
+</script>
+
+</body>
+</html>
