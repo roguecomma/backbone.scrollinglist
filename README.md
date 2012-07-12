@@ -1,4 +1,4 @@
-# bacbone.scrollinglist
+# backbone.scrollinglist
 
 *Work in progress*
 
